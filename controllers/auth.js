@@ -12,7 +12,7 @@ const crearUsuario = async (req, res = response) => {
 		if (usuario) {
 			return res.status(400).json({
 				ok: false,
-				mnsg: 'Un usuario ya existe con ese correo',
+				msg: 'Un usuario ya existe con ese correo',
 			});
 		}
 
@@ -52,7 +52,7 @@ const loginUsuario = async (req, res = response) => {
 		if (!usuario) {
 			return res.status(400).json({
 				ok: false,
-				mnsg: 'Un usuario no existe con ese email',
+				msg: 'Un usuario no existe con ese email',
 			});
 		}
 
@@ -63,7 +63,7 @@ const loginUsuario = async (req, res = response) => {
 		if (!validPassword) {
 			return res.status(400).json({
 				ok: false,
-				mns: 'Password incorrecto',
+				msg: 'Password incorrecto',
 			});
 		}
 
